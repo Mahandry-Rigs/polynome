@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm"> choisir a: <div class="form-group"><input type="number" class="form-control" [(ngModel)]="nbr_a"> </div> </div>
-    <div class="col-sm"> choisir b: <div class="form-group"><input type="number" class="form-control"[(ngModel)]="nbr_b"></div> </div>
-    <div class="col-sm"> choisir c: <div class="form-group"><input type="number" class="form-control"[(ngModel)]="nbr_c"></div> </div>
+    <div class="col-sm"> choisir a: <div class="form-group"><input type="number" class="form-control" [(ngModel)]="nbr_a"  > </div> </div>
+    <div class="col-sm"> choisir b: <div class="form-group"><input type="number" class="form-control"[(ngModel)]="nbr_b"  ></div> </div>
+    <div class="col-sm"> choisir c: <div class="form-group"><input type="number" class="form-control" [(ngModel)]="nbr_c" ></div>
+    </div>
   </div>
 
   <div class="row">
@@ -15,4 +16,5 @@
 
 <hr> 
 <app-delta [deltaValue]="nbr_b*nbr_b -4*nbr_a*nbr_c"></app-delta>
+
 </div>

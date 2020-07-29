@@ -15,4 +15,5 @@ export class TrinomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }

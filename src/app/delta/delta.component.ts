@@ -7,35 +7,29 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DeltaComponent implements OnInit {
 
-  @Input() deltaValue: number
+  @Input() deltaValue: number  
+  mesazy: string;
+  solution1:number;
+  solution2:number;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-testDelta(){
-  let message: string;
-  let x:number;
-  switch (this.deltaValue) { 
-
-  // Cas 1: deltaValue = zero
-    case 0: 
-      message = 'delta zero'; 
-      x = - nbr_b/2*nbr_a; 
-    break;
-
-// Cas 2: deltaValue negatif (Tsy haiko manao azy)
-    case -3:
-      message = 'delta negatif';     
-    break;
-
-// Cas 3: autre cas
-    default:
-      message = 'delta positif';     
-break;
-}
- console.log(message);
- return (message)
-}
+  onKey(event: any) {
+    // this.deltaValue = event.target.value * 1;
+    if (this.deltaValue > 0) {
+      this.mesazy = 'positif';
+      this.solution1 = 0;
+    }
+    else if (this.deltaValue === 0) {
+      this.mesazy = 'nul';      
+       this.solution1 = -nbr_b/2*nbr_a;
+    }
+    else if (this.deltaValue < 0) {
+      this.mesazy = ' negatif, donc pas de solution réelle';
+    }
+  }
 
 }

@@ -10,10 +10,12 @@ export class TrinomeComponent implements OnInit {
   nbr_a: number;
   nbr_b:number;
   nbr_c: number;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   
+
 }

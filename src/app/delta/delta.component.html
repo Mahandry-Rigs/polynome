@@ -5,11 +5,14 @@
   </div>
 
   <div class="row">
-      <h5> delta = <b *ngIf="deltaValue">{{ deltaValue }}</b> </h5>
+      <h5> Δ = <b *ngIf="deltaValue">{{ deltaValue }}</b> </h5>
   </div>
-
+  
+<br>
   <button class="btn btn-sm btn-outline-dark" (click)="onKey($event)"> RESULTAT <i class="fa fa-trash"
       aria-hidden="true"></i></button>
-      <h5> delta est {{ mesazy }} la solution est: {{ solution1 }} </h5>
+
+      <!-- <h5 *ngIf="solution1"> Δ est {{ mesazy }}; donc la solution est: {{ solution1 }} et {{ solution2 }} </h5> -->
+      <h5 *ngIf="solution1"> {{ texta }} </h5>
 
 </div>

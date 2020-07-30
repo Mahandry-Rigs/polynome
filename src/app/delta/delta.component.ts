@@ -8,13 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DeltaComponent implements OnInit {
 
   @Input() deltaValue: number ; 
-  @Input() nbr_a: number;
-  @Input() nbr_b: number;
-  @Input() nbr_c: number;
+  @Input() a:number;
+  @Input() b:number;
+  @Input() c:number;
 
   mesazy: string;
-  solution1:number;
-  solution2:number;
+  solution1:any;
+  solution2:any;
+  texta:any;
 
   constructor() { }
 
@@ -24,16 +25,19 @@ export class DeltaComponent implements OnInit {
   onKey(event: any) {
     // this.deltaValue = event.target.value * 1;
     if (this.deltaValue > 0) {
-      this.mesazy = 'positif';
-      this.solution1 = -this.nbr_b / 2 * this.nbr_a;
+      this.solution1 = -this.b - Math.sqrt(this.deltaValue)/ 2*this.a ;
+      this.solution2 = -this.b + Math.sqrt(this.deltaValue)/ 2*this.a ;
+      this.texta = 'Δ est Positif, donc 2 solution :  solution 1 = ' + this.solution1 + ' et  solution 2 = ' + this.solution2 ;
     }
+
     else if (this.deltaValue === 0) {
-      this.mesazy = 'nul';      
-       this.solution1 = -this.nbr_b/2*this.nbr_a;
-    }
+      this.solution1 = -this.b / 2 * this.a ;
+      this.texta = ' Δ est nul, donc une solution double qui vaut: ' + this.solution1 ;
+     }
+
     else if (this.deltaValue < 0) {
-      this.mesazy = ' negatif, donc pas de solution réelle';
+      this.texta = 'Δ est Negatif, Pas de solution réelles.';
     }
   }
 
-}
+  }

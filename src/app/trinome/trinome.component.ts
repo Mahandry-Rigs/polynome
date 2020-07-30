@@ -11,6 +11,8 @@ export class TrinomeComponent implements OnInit {
   nbr_b:number;
   nbr_c: number;
 
+
+  
   constructor() { }
 
   ngOnInit(): void {
